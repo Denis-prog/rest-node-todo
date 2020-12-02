@@ -1,0 +1,86 @@
+POST http://localhost:4000/signIn HTTP/1.1
+content-type: application/json
+
+{
+    "login": "дима",
+    "password": "12345"
+}
+
+###
+POST http://localhost:4000/checkAuth HTTP/1.1
+content-type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI1ZmM3NzI2ZjhjMWE1ZjQzNWNhNzU5MGQiLCJ0eXBlIjoiYWNjZXNzIiwiaWF0IjoxNjA2OTQxODIwLCJleHAiOjE2MDY5NTM4MjB9.6BYhnK82-bw36cId8eCnggZ9dUP5vIvMNS-RR7SwRe8
+###
+
+OPTIONS  http://localhost:4000/checkAuth HTTP/1.1
+content-type: application/json
+###
+
+GET http://localhost:4000/getAllDataByUser HTTP/1.1
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI1ZmM3NzI2ZjhjMWE1ZjQzNWNhNzU5MGQiLCJ0eXBlIjoiYWNjZXNzIiwiaWF0IjoxNjA2OTQxODIwLCJleHAiOjE2MDY5NTM4MjB9.6BYhnK82-bw36cId8eCnggZ9dUP5vIvMNS-RR7SwRe8
+
+GET http://localhost:4000/getColumnByUser/5eb5359a29a3794390ecaaba HTTP/1.1
+
+###
+
+POST http://localhost:4000/createUser HTTP/1.1
+content-type: application/json
+
+{
+    "login": "дима",
+    "password": "12345"
+}
+
+###
+
+POST http://localhost:4000/createColumn HTTP/1.1
+content-type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI1ZmM3NzI2ZjhjMWE1ZjQzNWNhNzU5MGQiLCJ0eXBlIjoiYWNjZXNzIiwiaWF0IjoxNjA2OTQxODIwLCJleHAiOjE2MDY5NTM4MjB9.6BYhnK82-bw36cId8eCnggZ9dUP5vIvMNS-RR7SwRe8
+
+{
+    "title": "сделать 999999"
+}
+
+
+###
+
+PUT http://localhost:4000/updateColumn/5eb804a278c42827e817bda3 HTTP/1.1
+content-type: application/json
+Authorization: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI1ZmM3NzI2ZjhjMWE1ZjQzNWNhNzU5MGQiLCJ0eXBlIjoiYWNjZXNzIiwiaWF0IjoxNjA2OTM2OTkzLCJleHAiOjE2MDY5NDg5OTN9.5PA7TYTOF9_lDpTCec0AULwr1SexuGull3K3_iBXSo8"
+
+{   
+    "title": "Поkt0000000"
+}
+
+###
+
+POST http://localhost:4000/createNote HTTP/1.1
+content-type: application/json
+
+{
+    "text": "test5",
+    "user": "5eb7cdc8802e1e0234070315",
+    "column": "5eb804a278c42827e817bda3"
+}
+
+
+###
+
+PUT  http://localhost:4000/updateNote/5eb5a66503e3db448cb4b678 HTTP/1.1
+content-type: application/json
+
+
+{
+    "text": "fdfdfdf",
+    "column": "5eb54c41bf5c046200a44949"
+}
+
+###
+
+DELETE  http://localhost:4000/deleteColumn/5eb7fb01966f1a6760edc74a HTTP/1.1
+content-type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI1ZWI3Y2RjODgwMmUxZTAyMzQwNzAzMTUiLCJ0eXBlIjoiYWNjZXNzIiwiaWF0IjoxNTg5MzU4NTI3LCJleHAiOjE1ODkzNzA1Mjd9.CWeEzsPFDH5yEgNOYOnRA7pbckkhN4V8onaosoO49f0
+
+###
+
+DELETE  http://localhost:4000/deleteNote/5ebbbecc654f263490c358d3 HTTP/1.1
